@@ -22,7 +22,11 @@ class AuthController extends Controller
     */
 
     use AuthenticatesAndRegistersUsers, ThrottlesLogins;
+
     protected $redirectTo = '/';
+    protected $redirectPath = 'inicio';
+    protected $loginPath = 'login';
+    protected $username = 'nickname';
     /**
      * Create a new authentication controller instance.
      *
@@ -36,7 +40,7 @@ class AuthController extends Controller
     /**
      * Get a validator for an incoming registration request.
      *
-     * @param  array  $data
+     * @param  array $data
      * @return \Illuminate\Contracts\Validation\Validator
      */
     protected function validator(array $data)
@@ -51,7 +55,7 @@ class AuthController extends Controller
     /**
      * Create a new user instance after a valid registration.
      *
-     * @param  array  $data
+     * @param  array $data
      * @return User
      */
     protected function create(array $data)
@@ -63,22 +67,4 @@ class AuthController extends Controller
         ]);
     }
 
-    /**
-     * Get the path to the login route.
-     *
-     * @return string
-     */
-    public function loginPath()
-    {
-        return route('login');
-    }
-    /**
-     * Get the post register / login redirect path.
-     *
-     * @return string
-     */
-    public function redirectPath()
-    {
-        return route('inicio');
-    }
 }

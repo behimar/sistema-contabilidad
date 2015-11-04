@@ -13,9 +13,9 @@
     <title>Conta</title>
 </head>
 
-<body>
-<nav>
-    <div class="nav-wrapper container">
+<body class="blue-grey lighten-5">
+<nav class="indigo darken-1">
+    <div class="nav-wrapper container ">
         <a href="{{route('login')}}" class="brand-logo">ContaWeb</a>
         <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
         <ul class="right hide-on-med-and-down">

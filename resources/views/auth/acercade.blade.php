@@ -2,6 +2,7 @@
 @section('content')
     <div class="parallax-container">
         <div class="parallax"><img src="../images/2.jpg"></div>
+
     </div>
     <div class="section white">
         <div class="row container">
@@ -10,7 +11,7 @@
         </div>
     </div>
     <div class="parallax-container">
-        <div class="parallax"><img src="../images/1.jpg"></div>
+        <div class="parallax"><img src="../images/1.jpg" width="150px"></div>
     </div>
 
     <div class="section white">
