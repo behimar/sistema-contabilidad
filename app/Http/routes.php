@@ -15,7 +15,7 @@ Route::get('/', [
     'uses'  => 'Auth@getIndex',
     'as'    => 'inicio'
 ]);*/
-
+/*
 Route::get('acerca-de', [
     'uses'  => 'Auth@getAbout',
     'as'    => 'acerca'
@@ -23,12 +23,36 @@ Route::get('acerca-de', [
 Route::get('contactenos', [
     'uses'  => 'Auth@getContact',
     'as'    => 'contacto'
-]);
+]);*/
 Route::get('master', function(){
    return view('layouts.master');
 });
-Route::get('/', 'Auth\AuthController@getLogin');
+Route::get('/',[
+    'uses'  => 'Auth\AuthController@getLogin',
+    'as'    => 'login'
+]);
 Route::post('/', [
-    'as' =>'login',
-    'uses' => 'Auth\AuthController@postLogin']);
-Route::get('logout', ['as' => 'auth/logout', 'uses' => 'Auth\AuthController@getLogout']);
+    'uses'  => 'Auth\AuthController@postLogin',
+    'as'    =>'login'
+]);
+Route::get('registrar',[
+    'as'    =>'register',
+    'uses'  =>'Auth\AuthController@getRegister']);
+Route::post('registrar', [
+    'uses'  => 'Auth\AuthController@postRegister',
+    'as'    => 'register'
+]);
+
+Route::get('logout', [
+    'as'    => 'logout',
+    'uses'  => 'Auth\AuthController@getLogout']);
+
+Route::get('home',[
+    'uses'  => 'HomeController@getIndex',
+    'as'    => 'home'
+]);
+Route::get('culo',function(){
+
+    $ser = \App\User::all();
+    return $ser;
+});

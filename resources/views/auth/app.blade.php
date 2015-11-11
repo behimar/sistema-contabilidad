@@ -17,30 +17,7 @@
 <nav class="indigo darken-1">
     <div class="nav-wrapper container ">
         <a href="{{route('login')}}" class="brand-logo">ContaWeb</a>
-        <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
-        <ul class="right hide-on-med-and-down">
-            <li>
-                <a href="{{route('login')}}">Inicio</a>
-            </li>
-            <li>
-                <a href="{{route('acerca')}}">Acerca de</a>
-            </li>
-            <li>
-                <a href="{{route('contacto')}}">Contactos</a>
-            </li>
-        </ul>
 
-        <ul class="side-nav" id="mobile-demo">
-            <li>
-                <a href="{{route('login')}}">Inicio</a>
-            </li>
-            <li>
-                <a href="{{route('acerca')}}">Acerca de</a>
-            </li>
-            <li>
-                <a href="{{route('contacto')}}">Contactos</a>
-            </li>
-        </ul>
     </div>
 
 </nav>
@@ -52,9 +29,6 @@
 <script>
     $( document ).ready(function() {
         $(".button-collapse").sideNav();
-
-
-
     });
 </script>
 <script>
@@ -66,7 +40,6 @@
 <script>
     $( document ).ready(function() {
         $('.modal-trigger').leanModal();
-
     });
 </script>
 </body>

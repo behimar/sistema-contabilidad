@@ -3,3 +3,8 @@
 
 .app-card-parent {padding:  5% 0;}
 .app-card-child  {padding: 10% 0;}
+
+
+.parallax-container {
+    height: 440px;
+}
