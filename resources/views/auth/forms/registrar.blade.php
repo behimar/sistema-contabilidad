@@ -31,6 +31,5 @@
         <button class="btn waves-effect waves-light red lighten-1" type="submit">Registrarse</button>
         <a class="btn  modal-close waves-effect waves-light red lighten-1" type="button" href="{{'/'}}" >Cancelar
         </a>
-
     </div>
 </form>
