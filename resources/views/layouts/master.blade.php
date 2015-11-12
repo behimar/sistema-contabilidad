@@ -15,7 +15,7 @@
 <header>
     <ul id="drop" class="dropdown-content">
         <li><a href="">{{Auth::User()->name}}</a></li>
-        <li><a href="">Configuración</a></li>
+        <li><a href="">Perfil de Usuario</a></li>
         <li><a href="{{route('logout')}}">Salir</a></li>
     </ul>
     <nav class="indigo darken-1">
@@ -30,21 +30,19 @@
             </ul>
 
             <ul id="slide-out" class="side-nav fixed">
-                <li><a href="#!">First Sidebar Link</a></li>
-                <li><a href="#!">Second Sidebar Link</a></li>
+                <div class="app-logoPro">
+                    <img class="app-img-logo" src="../images/iconoUser.png">
+                    <p><em>{{Auth::User()->name}}</em></p>
+
+                </div>
+              @include('layouts.menu')
             </ul>
         </div>
     </nav>
 </header>
 <main>
     <div class="container">
-        <h1>asdfasdf</h1>
-        <h1>asdfasdf</h1>
-        <h1>asdfasdf</h1>
-        <h1>asdfasdf</h1>
-        <h1>asdfasdf</h1>
-        <h1>asdfasdf</h1>
-        <h1>asdfasdf</h1>
+        @yield('content')
     </div>
 
 

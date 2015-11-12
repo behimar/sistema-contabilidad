@@ -20,6 +20,7 @@ class UserTableSeeder extends Seeder
             'name'  => 'admin',
             'email' => 'admin@sistema.com',
             'password'  => bcrypt('admin'),
+            'type'      => 'admin',
         ]);
     }
     public function crearYo(){
@@ -28,6 +29,7 @@ class UserTableSeeder extends Seeder
             'name'  => 'behimar',
             'email' => 'behialvarado@gmail.com',
             'password'  => bcrypt('behimar'),
+            'type'      => 'contador',
         ]);
     }
 }

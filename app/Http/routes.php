@@ -10,23 +10,11 @@
 | and give it the controller to call when that URI is requested.
 |
 */
-/*
-Route::get('/', [
-    'uses'  => 'Auth@getIndex',
-    'as'    => 'inicio'
-]);*/
-/*
-Route::get('acerca-de', [
-    'uses'  => 'Auth@getAbout',
-    'as'    => 'acerca'
-]);
-Route::get('contactenos', [
-    'uses'  => 'Auth@getContact',
-    'as'    => 'contacto'
-]);*/
+
 Route::get('master', function(){
    return view('layouts.master');
 });
+
 Route::get('/',[
     'uses'  => 'Auth\AuthController@getLogin',
     'as'    => 'login'
@@ -35,14 +23,15 @@ Route::post('/', [
     'uses'  => 'Auth\AuthController@postLogin',
     'as'    =>'login'
 ]);
-Route::get('registrar',[
-    'as'    =>'register',
-    'uses'  =>'Auth\AuthController@getRegister']);
-Route::post('registrar', [
+
+Route::get('register',[
+    'uses'  => 'Auth\AuthController@getRegister',
+    'as'    => 'register'
+]);
+Route::post('register', [
     'uses'  => 'Auth\AuthController@postRegister',
     'as'    => 'register'
 ]);
-
 Route::get('logout', [
     'as'    => 'logout',
     'uses'  => 'Auth\AuthController@getLogout']);

@@ -23,9 +23,7 @@ class AuthController extends Controller
 
     use AuthenticatesAndRegistersUsers, ThrottlesLogins;
 
-    protected $redirectTo = '/bienvenido';
-    protected $redirectPath = 'login';
-    protected $loginPath = 'login';
+    protected $redirectTo = '/';
     protected $username = 'name';
     /**
      * Create a new authentication controller instance.
@@ -60,19 +58,28 @@ class AuthController extends Controller
      */
     protected function create(array $data)
     {
+
         $user = new User([
-            'name' => $data['name'],
-            'email' => $data['email'],
-            'password' => bcrypt($data['password']),
+            'name'      => $data['name'],
+            'email'     => $data['email'],
+            'password'  => bcrypt($data['password']),
+
         ]);
         $user->save();
         Session::flash('message','Usuario Creado Exitosamente ... ¡Bienvenido!');
-         return redirect()->back();
+        return redirect()->back();
         /*return User::create([
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => bcrypt($data['password']),
         ]);*/  //metodo original
     }
-
+    public function loginPath()
+    {
+        return route('login');
+    }
+    public function redirectPath()
+    {
+        return route('home');
+    }
 }

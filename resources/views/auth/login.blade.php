@@ -1,17 +1,12 @@
 @extends('auth.app')
 @section('content')
     @if($errors->has())
-        <div class="alert alert-warning" role="alert">
-            @foreach ($errors->all() as $error)
-                <div>{{ $error }}</div>
-            @endforeach
-        </div>
-    @endif
-
-    @if(Session::has('message'))
-        <div class="alert alert-dismissible alert-success" class="col-md-10">
-            <button type="button" class="close" data-dismiss="alert">×</button>
-            <i class="fa fa-check-square"></i>{{Session::get('message')}}
+        <div class="container-fluid">
+            <div class="card-panel small red" role="alert">
+                @foreach ($errors->all() as $error)
+                    <p class="center">{{ $error }}</p>
+                @endforeach
+            </div>
         </div>
     @endif
 
@@ -27,9 +22,7 @@
                 <button class="btn waves-effect waves-light modal-trigger red lighten-1" href="#login">Ingresar
                     <i class="material-icons right"></i>
                 </button>
-                <button class="btn waves-effect waves-light modal-trigger red lighten-1" href="#register">Registrarse
-                    <i class="material-icons right"></i>
-                </button>
+                <a href="{{route('register')}}" class="btn waves-effect waves-light red lighten-1">Registrarse</a>
             </div>
         </div>
     </div>
@@ -114,13 +107,4 @@
         </div>
     </div>
     {{--fin modal login--}}
-    {{--modal registro--}}
-    <div id="register" class="modal">
-        <div class="modal-content">
-            <h4>Registrarse</h4>
-            @include('auth.forms.registrar')
-        </div>
-
-    </div>
-    {{--fin modal registro--}}
 @endsection

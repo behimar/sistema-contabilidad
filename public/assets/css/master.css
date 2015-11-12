@@ -11,3 +11,29 @@ header, main, footer {
         padding-left: 0;
     }
 }
+/*  ##################
+* el logo del menu
+*/
+
+.app-logoPro {
+    text-align: center;
+    margin-bottom: 5px;
+    /*background-color: #3949ab;*/
+    background-color: #283593;
+
+}
+.app-img-logo{
+    margin-top: 10px;
+
+}
+ul.side-nav.fixed li.logo:hover {
+    background-color: transparent; }
+
+#logo-container {
+    height: 57px;
+    margin-bottom: 32px; }
+
+.app-font-logo {
+@extend .indigo, .darken-1;
+
+}
