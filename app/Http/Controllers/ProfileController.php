@@ -21,7 +21,7 @@ class ProfileController extends Controller
      */
     public function index()
     {
-        return view('profile.profile');
+        return view('profileUsr.profile');
     }
 
     /**
@@ -31,7 +31,7 @@ class ProfileController extends Controller
      */
     public function create()
     {
-        return view('profile.profileRegister');
+        return view('profileUsr.profileRegister');
     }
 
     /**
@@ -54,7 +54,7 @@ class ProfileController extends Controller
         $user = User::find($request['id']);
 
         Session::flash('message','Datos ingresados Correctamente');
-        return view('profile.profile',compact('user','profile'));
+        return view('profileUsr.profile',compact('user','profile'));
 
     }
 
@@ -76,9 +76,9 @@ class ProfileController extends Controller
         */
         //return  $user."\n". $profile;
         if($profile== null){
-            return view('profile.profileNull');
+            return view('profileUsr.profileNull');
         }else{
-            return view('profile.profile',compact('user','profile'));
+            return view('profileUsr.profile',compact('user','profile'));
         }
     }
 
@@ -92,7 +92,7 @@ class ProfileController extends Controller
     {
         $user = User::find($id);
         $profile = User::find($id)->Profile;
-        return view('profile.edit',compact('user','profile'));
+        return view('profileUsr.edit',compact('user','profile'));
     }
 
     /**

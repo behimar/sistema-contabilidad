@@ -12,6 +12,5 @@
     <file url="file://$PROJECT_DIR$/resources/views/auth/login.blade.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/resources/views/auth/register.blade.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/resources/views/layouts/master.blade.php" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/resources/views/profile/forms/reg.blade.php" charset="UTF-8" />
   </component>
 </project>
