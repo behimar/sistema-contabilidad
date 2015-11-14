@@ -16,7 +16,7 @@ class CreateProfilesTable extends Migration
             $table->engine='InnoDB';
 
             $table->increments('id');
-            $table->string('nomre',100);
+            $table->string('nombre',100);
             $table->string('apP',60);
             $table->string('apM',60)->nullable();
             $table->integer('telefono');

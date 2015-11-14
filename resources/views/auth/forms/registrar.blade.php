@@ -1,5 +1,5 @@
 <form class="col s12" action="{{route('register')}}"  method="POST">
-
+    {!! csrf_field() !!}
     <div class="row">
         <div class="input-field col s6">
             <input id="id" type="number" name="id" class="validate">

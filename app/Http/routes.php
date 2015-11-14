@@ -40,8 +40,19 @@ Route::get('home',[
     'uses'  => 'HomeController@getIndex',
     'as'    => 'home'
 ]);
-Route::get('culo',function(){
 
-    $ser = \App\User::all();
-    return $ser;
-});
+/* #########
+* rutas del perfil
+*/
+Route::get('perfil-usuario-registrar',[
+    'uses'  => 'ProfileController@create',
+    'as'    => 'create'
+]);
+Route::post('perfil-usuario-registrar',[
+    'uses'  => 'ProfileController@store',
+    'as'    => 'regProf'
+]);
+Route::get('perfil-usuario-{id}',[
+    'uses'  => 'ProfileController@show',
+    'as'    => 'index'
+]);

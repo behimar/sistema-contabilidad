@@ -13,7 +13,7 @@
     <title>Conta</title>
 </head>
 
-<body class="blue-grey lighten-5">
+<body class="grey lighten-1">
 <nav class="indigo darken-1">
     <div class="nav-wrapper container ">
         <a href="{{route('login')}}" class="brand-logo">ContaWeb</a>

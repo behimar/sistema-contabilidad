@@ -1,14 +1,6 @@
 @extends('auth.app')
 @section('content')
-    @if($errors->has())
-        <div class="container-fluid">
-            <div class="card-panel small red" role="alert">
-                @foreach ($errors->all() as $error)
-                    <p class="center">{{ $error }}</p>
-                @endforeach
-            </div>
-        </div>
-    @endif
+    @include('layouts.partials.errors')
 
     <div class="parallax-container">
         <div class="parallax"><img src="../images/2.jpg"></div>
