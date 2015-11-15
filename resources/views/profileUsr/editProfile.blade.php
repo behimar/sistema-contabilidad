@@ -1,4 +1,4 @@
-@extends('profile.app')
+@extends('profileUsr.app')
 @section('content')
 
     <div class="col s12 m12">

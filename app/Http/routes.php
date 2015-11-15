@@ -56,3 +56,14 @@ Route::get('perfil-usuario-{id}',[
     'uses'  => 'ProfileController@show',
     'as'    => 'index'
 ]);
+
+
+Route::get('gettt',function(){
+    $letra ='DISMINUCIÓNDEPREVISIONPARAINCOBRABILIDADDECARTERA,PREVISIÓNGENÉRICAPORELEXCESOALLÍMITEDEOPERACIONESDECONSUMONODEBIDAMENTEGARANTIZADAS,PREVISIÓNGENÉRICACÍCLICAYOTRAS';
+    $sssss = '43101';
+    $sdf = \App\Nomenclator::where('id',$sssss)->get();
+
+    //$nuo = 'admin';
+    //$usu = \App\User::where('name',$nuo)->get();
+    return $sdf;
+});
