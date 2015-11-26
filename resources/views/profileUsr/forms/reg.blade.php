@@ -22,11 +22,12 @@
         <label for="telefono">Telefono</label>
     </div>
     <div class="input-field col s12 m6">
-        <input id="fecNac" type="date" name="fecNac" class="validate">
-        {{--<input type="date" class="datepicker">--}}
-        <label for="fecNac"></label>
+        {{--<input id="fecNac" type="date" name="fecNac" class="validate">--}}
+        <input id="fecNac" type="date" class="datepicker">
+        <label for="fecNac">Fecha de nacimiento</label>
     </div>
 </div>
 <div class="row left-align">
     <button class="btn waves-effect waves-light red lighten-1" type="submit">Registrarse</button>
+    <a href="{{route('home')}}" class="btn waves-effect waves-light red lighten-1">Volver</a>
 </div>

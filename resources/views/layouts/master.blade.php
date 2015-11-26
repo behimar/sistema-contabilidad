@@ -9,6 +9,7 @@
     <link type="text/css" rel="stylesheet" href="assets/css/master.css"  media="screen,projection"/>
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>ContaWeb - @yield('title')</title>
 </head>
 <body class="grey lighten-1">
     <header>
@@ -22,7 +23,7 @@
         </ul>
         <nav class="indigo darken-1">
             <div class="nav-wrapper container-fluid">
-                <a href="#!" class="brand-logo">ContaWeb</a>
+                <a href="{{route('home')}}" class="brand-logo">ContaWeb</a>
                 <ul class="left">
                     <a href="#" data-activates="slide-out" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
                 </ul>
@@ -64,5 +65,7 @@
     <script>
         $(".button-collapse").sideNav();
     </script>
+    @section('scripts')
+    @show
 </body>
 </html>

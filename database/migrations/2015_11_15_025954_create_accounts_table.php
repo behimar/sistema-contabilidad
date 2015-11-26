@@ -14,12 +14,16 @@ class CreateAccountsTable extends Migration
     {
         Schema::create('accounts', function (Blueprint $table) {
             $table->engine='InnoDB';
+
             $table->increments('id');
             $table->date('fecha');
             $table->string('ciudad')->default('La Paz');
-            $table->float('montoDebe');
-            $table->float('montoHaber');
+            $table->float('montoDebe')->nullable();
+            $table->float('montoHaber')->nullable();
+            $table->text('glosa');
+            $table->integer('transaction_id')->unsigned();
             $table->timestamps();
+
         });
     }
 

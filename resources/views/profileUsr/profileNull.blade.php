@@ -1,4 +1,5 @@
 @extends('profileUsr.app')
+@section('title', 'Ups..')
 @section('content')
     <div class="col s12 m12  app-card-child">
         <div class="card white ">
@@ -18,6 +19,7 @@
 
                 {{-- {!! link_to_route('create', $title = 'Vamos a registrarnos', $parameters = Auth::User()->id, $attributes = ['class'=>'red-text lighten-1']) !!} --}}
                 <a href="{{route('create')}}" class="red-text lighten-1">Vamos a registrarnos!</a>
+                <a href="{{route('home')}}" class="red-text lighten-1">Volver</a>
 
             </div>
         </div>

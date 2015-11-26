@@ -37,3 +37,6 @@ ul.side-nav.fixed li.logo:hover {
 @extend .indigo, .darken-1;
 
 }
+blockquote{
+    border-left: 0px solid ;
+}

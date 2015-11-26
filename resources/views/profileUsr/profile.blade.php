@@ -1,4 +1,5 @@
 @extends('profileUsr.app')
+@section('title', 'Perfil de Usuario')
 @section('content')
     <div class="row">
         <div class="col s12 m12">

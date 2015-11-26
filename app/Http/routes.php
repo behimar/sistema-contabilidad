@@ -56,14 +56,60 @@ Route::get('perfil-usuario-{id}',[
     'uses'  => 'ProfileController@show',
     'as'    => 'index'
 ]);
+/* ######### */
 
+/* #########
+* rutas del comprobante
+*/
+Route::get('nuevo-comprobante',[
+    'uses'  => 'AccountController@index',
+    'as'    => 'newAccount'
+]);
+Route::post('nuevo-comprobante',[
+    'uses'  => 'AccountController@store',
+    'as'    => 'newAccount'
+]);
 
-Route::get('gettt',function(){
-    $letra ='DISMINUCIÓNDEPREVISIONPARAINCOBRABILIDADDECARTERA,PREVISIÓNGENÉRICAPORELEXCESOALLÍMITEDEOPERACIONESDECONSUMONODEBIDAMENTEGARANTIZADAS,PREVISIÓNGENÉRICACÍCLICAYOTRAS';
-    $sssss = '43101';
-    $sdf = \App\Nomenclator::where('id',$sssss)->get();
+/* ########
+ *rutas para las transacciones
+ *
+ */
+Route::get('nueva-transaccion-{num}',[
+    'uses'  => 'TransactionController@index',
+    'as'    => 'newTransaction'
+]);
+Route::post('nueva-transaccion-{num}',[
+    'uses'  => 'TransactionController@store',
+    'as'    => 'newTransaction'
+]);
+Route::get('eliminar-transaccion-{id}',[
+    'uses'  => 'TransactionController@destroy',
+    'as'    => 'deleteTransaction'
+]);
 
-    //$nuo = 'admin';
-    //$usu = \App\User::where('name',$nuo)->get();
-    return $sdf;
+Route::get('find',function(){
+
+    $num = \Illuminate\Support\Facades\DB::table('accounts')
+
+        ->orderBy('id','desc')
+        ->take(1)
+        ->get();
+    if( $num == null){
+
+        $nume =1;
+        return $nume;
+    }
+
+    //print_r($num);
+
+    return $num[0]->id = $num[0]->id+1;
+});
+
+Route::get('as',function(){
+//    select * from accounts left join transactions on accounts.id = transactions.account_id;
+    $f = \Illuminate\Support\Facades\DB::table('accounts')
+        ->join('transactions','accounts.id','=','transactions.account_id')
+
+        ->get();
+    return $f;
 });

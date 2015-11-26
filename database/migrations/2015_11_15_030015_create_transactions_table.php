@@ -19,17 +19,13 @@ class CreateTransactionsTable extends Migration
             $table->integer('nomenclator_id')->unsigned();
             $table->enum('tipo',['debe','haber']);
             $table->float('monto');
-            $table->text('glosa');
             $table->integer('account_id')->unsigned();
             $table->timestamps();
 
             $table->foreign('nomenclator_id')
                     ->references('id')->on('nomenclators')
-                    ->onDelete('cascade');
-
-            $table->foreign('account_id')
-                    ->references('id')->on('accounts')
-                    ->onDetelete('cascade');
+                    ->onDelete('restrict')
+                    ->onUpdate('cascade');
         });
     }
 
