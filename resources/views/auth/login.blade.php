@@ -9,7 +9,7 @@
             <h1 class="center-align">Sistema de Contabilidad</h1>
 
             </div>
-            <h5 class="center-align">Es un sistema que permite la automatizacion del registro y proceso de operaciones económicas y financieras </h5>
+            <h5 class="center-align hide-on-small-only">Es un sistema que permite la automatizacion del registro y proceso de operaciones económicas y financieras </h5>
             <div class="row center">
                 <button class="btn waves-effect waves-light modal-trigger red lighten-1" href="#login">Ingresar
                     <i class="material-icons right"></i>
@@ -72,13 +72,16 @@
             <div class="row">
                 <div class="col l6 s12">
                     <h5 class="white-text">Escuela Militar de Ingenieria </h5>
-                    <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
+
                 </div>
                 <div class="col l4 offset-l2 s12">
                     <h5 class="white-text">Desarrolado por</h5>
                     <ul>
-                        <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
-                        <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
+                        <li class="white-text">Behimar Alvarado Aranda</li>
+                        <li class="white-text">Septimo Semestre</li>
+                        <li class="white-text">behialvarado@gmail.com</li>
+                        {{--<li><a class="grey-text text-lighten-3" href="#!">Behimar Moises Alvarado Aranda</a></li>
+                        <li><a class="grey-text text-lighten-3" href="#!">Septimo Semestre</a></li>--}}
                     </ul>
                 </div>
             </div>

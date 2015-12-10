@@ -35,7 +35,7 @@
                                 <label>Categoria</label>
                             </div>
                             <div class="input-field col s3 m3">
-                                <input id="monto" type="text" class="validate" name="monto">
+                                <input id="monto" type="text" class="validate" name="monto" onKeyPress="return checkIt(event)">
                                 <label for="monto">Monto</label>
                             </div>
                         </div>
@@ -117,6 +117,24 @@
             document.form.disabled.value = clicked_id;
 
         }
+        function checkIt(evt) {
 
+            evt = (evt) ? evt : window.event
+
+            var charCode = (evt.which) ? evt.which : evt.keyCode
+
+            if (charCode > 31 && (charCode < 46 || charCode > 57)) {
+
+                status = "Ingrese solo números"
+
+                return false
+
+            }
+
+            status = ""
+
+            return true
+
+        }
     </script>
 @endsection

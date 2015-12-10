@@ -29,7 +29,7 @@ Route::get('register',[
     'as'    => 'register'
 ]);
 Route::post('register', [
-    'uses'  => 'Auth\AuthController@postRegister',
+    'uses'  => 'Regitrar@store',
     'as'    => 'register'
 ]);
 Route::get('logout', [
@@ -86,6 +86,25 @@ Route::get('eliminar-transaccion-{id}',[
     'uses'  => 'TransactionController@destroy',
     'as'    => 'deleteTransaction'
 ]);
+/*
+ *ruta libro mayor
+ *
+ */
+Route::get('libro-Mayor',[
+    'uses'  => 'BookController@index',
+    'as'    => 'libros'
+]);
+
+/*
+ *ruta libro mayor
+ *
+ */
+Route::get('admin-usuarios',[
+    'uses'  => 'AdminController@index',
+    'as'    => 'users'
+]);
+
+
 
 Route::get('find',function(){
 
@@ -105,11 +124,3 @@ Route::get('find',function(){
     return $num[0]->id = $num[0]->id+1;
 });
 
-Route::get('as',function(){
-//    select * from accounts left join transactions on accounts.id = transactions.account_id;
-    $f = \Illuminate\Support\Facades\DB::table('accounts')
-        ->join('transactions','accounts.id','=','transactions.account_id')
-
-        ->get();
-    return $f;
-});

@@ -22,8 +22,6 @@ class HomeController extends Controller
             ->join('nomenclators','transactions.nomenclator_id','=','nomenclators.id')
             ->select('accounts.id','montoDebe','montoHaber','glosa','accounts.created_at','tipo','nomenclator_id','monto','cuenta')
             ->get();
-        $cuents = collect($cuentas);
-        $leng = $cuents->count();
         $folios = Account::all();
         return view('layouts.main',compact('cuentas','leng','folios'));
     }

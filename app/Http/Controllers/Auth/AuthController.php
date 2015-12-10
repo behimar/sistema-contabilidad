@@ -68,14 +68,14 @@ class AuthController extends Controller
         $user->type     ='contador';
         $user->save();
 
-        return route('home');*/
+        return redirect()->route('login');*/
         return User::create([
             'id'        => $data['id'],
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => bcrypt($data['password']),
             'type'  => 'contador',
-        ]);  //metodo original
+        ]);  //metodo original*/
     }
     public function loginPath()
     {

@@ -4,6 +4,7 @@
     <file url="file://$PROJECT_DIR$/public/assets/css" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/public/assets/font" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/public/assets/js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/resources/views/admin/usuarios.blade.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/resources/views/auth/acercade.blade.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/resources/views/auth/app.blade.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/resources/views/auth/contacto.blade.php" charset="UTF-8" />
@@ -14,6 +15,7 @@
     <file url="file://$PROJECT_DIR$/resources/views/comprobante/comprobante.blade.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/resources/views/layouts/main.blade.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/resources/views/layouts/master.blade.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/resources/views/mayores/mayores.blade.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/resources/views/transacciones/transaccion.blade.php" charset="UTF-8" />
   </component>
 </project>
